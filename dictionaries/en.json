@@ -1,0 +1,77 @@
+{
+    "common": {
+        "loading": "Loading...",
+        "contact": "Contact",
+        "learn_more": "Learn More",
+        "view_all": "View All",
+        "install_app": "Install App"
+    },
+    "nav": {
+        "home": "Home",
+        "services": "Services",
+        "about": "About",
+        "faq": "FAQ",
+        "contact": "Contact"
+    },
+    "hero": {
+        "title": "Power on the Move",
+        "subtitle": "Smart and sustainable charging solutions for a connected world.",
+        "cta_primary": "Contact Us",
+        "cta_secondary": "Install App"
+    },
+    "services": {
+        "title": "Our Services",
+        "items": {
+            "station": {
+                "title": "CL19 Charging Station",
+                "description": "Secure lockers with fast charging and interactive display."
+            },
+            "powerbank": {
+                "title": "Powerbank Dispensers",
+                "description": "Rent a portable battery and charge while you walk."
+            },
+            "truck": {
+                "title": "Mobile Charging Truck",
+                "description": "Energy that comes to you. For EVs and events."
+            }
+        }
+    },
+    "stats": {
+        "charge_speed": "25% in 15 min",
+        "power": "Up to 100W",
+        "connectivity": "Bluetooth 150m"
+    },
+    "about": {
+        "title": "About Us",
+        "mission": "Making energy accessible everywhere, anytime."
+    },
+    "faq": {
+        "title": "Frequently Asked Questions"
+    },
+    "contact": {
+        "title": "Contact Us",
+        "form": {
+            "name": "Full Name",
+            "email": "Email Address",
+            "phone": "Phone (Optional)",
+            "subject": "Subject",
+            "message": "Your Message",
+            "send": "Send Message",
+            "success": "Message sent successfully!"
+        }
+    },
+    "app_section": {
+        "title": "Manage your charge from your phone",
+        "description": "Locate stations, track your sessions, and pay securely.",
+        "features": [
+            "Interactive station map",
+            "Real-time tracking",
+            "Secure payments",
+            "24/7 Support"
+        ]
+    },
+    "footer": {
+        "rights": "All rights reserved.",
+        "credit": "Site by Christopher Perrault"
+    }
+}

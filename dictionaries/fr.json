@@ -1,0 +1,77 @@
+{
+    "common": {
+        "loading": "Chargement...",
+        "contact": "Contact",
+        "learn_more": "En savoir plus",
+        "view_all": "Voir tout",
+        "install_app": "Installer l'application"
+    },
+    "nav": {
+        "home": "Accueil",
+        "services": "Services",
+        "about": "À propos",
+        "faq": "FAQ",
+        "contact": "Contact"
+    },
+    "hero": {
+        "title": "Puissance en déplacement",
+        "subtitle": "Solutions de recharge intelligentes et durables pour un monde connecté.",
+        "cta_primary": "Nous contacter",
+        "cta_secondary": "Installer l'app"
+    },
+    "services": {
+        "title": "Nos Services",
+        "items": {
+            "station": {
+                "title": "Station de recharge CL19",
+                "description": "Casiers sécurisés avec recharge rapide et écran interactif."
+            },
+            "powerbank": {
+                "title": "Bornes de Powerbanks",
+                "description": "Empruntez une batterie portable et chargez en marchant."
+            },
+            "truck": {
+                "title": "Camion de recharge mobile",
+                "description": "L'énergie qui vient à vous. Pour VÉ et événements."
+            }
+        }
+    },
+    "stats": {
+        "charge_speed": "25% en 15 min",
+        "power": "Jusqu'à 100W",
+        "connectivity": "Bluetooth 150m"
+    },
+    "about": {
+        "title": "À propos de nous",
+        "mission": "Rendre l'énergie accessible partout, tout le temps."
+    },
+    "faq": {
+        "title": "Questions fréquentes"
+    },
+    "contact": {
+        "title": "Contactez-nous",
+        "form": {
+            "name": "Nom complet",
+            "email": "Adresse email",
+            "phone": "Téléphone (optionnel)",
+            "subject": "Sujet",
+            "message": "Votre message",
+            "send": "Envoyer le message",
+            "success": "Message envoyé avec succès!"
+        }
+    },
+    "app_section": {
+        "title": "Gérez votre recharge depuis votre téléphone",
+        "description": "Localisez les stations, suivez vos sessions et payez en toute sécurité.",
+        "features": [
+            "Carte interactive des stations",
+            "Suivi en temps réel",
+            "Paiements sécurisés",
+            "Support 24/7"
+        ]
+    },
+    "footer": {
+        "rights": "Tous droits réservés.",
+        "credit": "Site par Christopher Perrault"
+    }
+}
