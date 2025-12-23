@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Globe, Zap } from "lucide-react";
@@ -30,10 +30,19 @@ export function Header({ lang, dictionary }: HeaderProps) {
     const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
     const pathname = usePathname();
     const router = useRouter();
+    
+    // Scroll progress
+    const { scrollYProgress } = useScroll();
+    const scaleX = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001,
+    });
 
     React.useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 20);
+            const scrolled = window.scrollY > 20;
+            setIsScrolled(scrolled);
         };
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
@@ -59,54 +68,80 @@ export function Header({ lang, dictionary }: HeaderProps) {
         <motion.header
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
-                isScrolled ? "bg-white/80 backdrop-blur-md border-gray-200 py-2" : "bg-transparent py-4 text-white"
+                isScrolled ? "bg-white/95 backdrop-blur-xl border-emerald-100/50 py-2 shadow-sm shadow-emerald-500/5" : "bg-transparent py-4 text-white"
             )}
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
         >
+            {/* Scroll Progress Bar */}
+            <motion.div
+                className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-emerald-500 via-teal-500 to-blue-500 origin-left"
+                style={{ scaleX }}
+            />
+            
             <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
                 {/* Logo */}
-                <Link href={`/${lang}`} className="flex items-center gap-2 font-bold text-xl tracking-tighter">
-                    <div className="bg-primary text-white p-1.5 rounded-lg">
-                        <Zap className="h-5 w-5 fill-current" />
-                    </div>
-                    <span className={isScrolled ? "text-foreground" : "text-white"}>Dr. Charge</span>
+                <Link href={`/${lang}`} className="flex items-center gap-2 font-bold text-xl tracking-tighter group">
+                    <motion.div
+                        className="p-2 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 transition-all duration-300"
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        transition={{ type: "spring", stiffness: 400 }}
+                    >
+                        <Zap className="h-5 w-5 text-white fill-current" />
+                    </motion.div>
+                    <span className="text-gray-900 transition-all duration-300">
+                        Dr. Charge
+                    </span>
                 </Link>
 
                 {/* Desktop Nav */}
-                <nav className="hidden md:flex items-center gap-8">
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.href}
-                            href={link.href}
-                            className={cn(
-                                "text-sm font-medium transition-colors hover:text-primary relative group",
-                                isScrolled ? "text-muted-foreground" : "text-white/90"
-                            )}
-                        >
-                            {link.label}
-                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
-                        </Link>
-                    ))}
+                <nav className="hidden md:flex items-center gap-2">
+                    {navLinks.map((link) => {
+                        const isActive = pathname === link.href;
+                        return (
+                            <Link
+                                key={link.href}
+                                href={link.href}
+                                className={cn(
+                                    "relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg group",
+                                    isActive
+                                        ? "text-emerald-700 bg-emerald-100"
+                                        : "text-gray-700 hover:text-emerald-700 hover:bg-emerald-50/50"
+                                )}
+                            >
+                                {link.label}
+                                {isActive && (
+                                    <motion.div
+                                        className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 rounded-full bg-emerald-600 w-1/2"
+                                        layoutId="activeNav"
+                                        transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                                    />
+                                )}
+                            </Link>
+                        );
+                    })}
                 </nav>
 
                 {/* Actions */}
-                <div className="hidden md:flex items-center gap-4">
-                    <Link href={switchLang()} className={cn(
-                        "flex items-center gap-1 text-xs font-medium uppercase tracking-wider px-2 py-1 rounded transition-colors",
-                        isScrolled ? "hover:bg-secondary text-foreground" : "text-white hover:bg-white/20"
-                    )}>
-                        <Globe className="h-3 w-3" />
-                        {lang === "fr" ? "EN" : "FR"}
-                    </Link>
-                    <Button
-                        variant={isScrolled ? "default" : "secondary"}
-                        size="sm"
-                        onClick={() => router.push(`/${lang}/contact`)}
+                <div className="hidden md:flex items-center gap-3">
+                    <Link 
+                        href={switchLang()} 
+                        className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 bg-gray-100 hover:bg-gray-200 text-gray-900"
                     >
-                        {dictionary.common.contact}
-                    </Button>
+                        <Globe className="h-4 w-4" />
+                        <span className="uppercase tracking-wider text-xs font-semibold">
+                            {lang === "fr" ? "EN" : "FR"}
+                        </span>
+                    </Link>
+                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                        <Button
+                            className="px-6 py-2 rounded-lg font-semibold transition-all duration-300 shadow-lg bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white shadow-emerald-500/20"
+                            onClick={() => router.push(`/${lang}/contact`)}
+                        >
+                            {dictionary.common.contact}
+                        </Button>
+                    </motion.div>
                 </div>
 
                 {/* Mobile Toggle */}

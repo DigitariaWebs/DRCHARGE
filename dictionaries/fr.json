@@ -4,7 +4,9 @@
         "contact": "Contact",
         "learn_more": "En savoir plus",
         "view_all": "Voir tout",
-        "install_app": "Installer l'application"
+        "install_app": "Installer l'application",
+        "explore": "Explorer",
+        "discover": "Découvrir plus"
     },
     "nav": {
         "home": "Accueil",
@@ -17,7 +19,49 @@
         "title": "Puissance en déplacement",
         "subtitle": "Solutions de recharge intelligentes et durables pour un monde connecté.",
         "cta_primary": "Nous contacter",
-        "cta_secondary": "Installer l'app"
+        "cta_secondary": "Installer l'app",
+        "scroll_hint": "Défiler pour explorer"
+    },
+    "challenge": {
+        "badge": "Le Défi",
+        "title": "0% de batterie? Plus jamais.",
+        "subtitle": "Ne laissez plus une batterie vide gâcher votre journée. Avec le réseau Dr. Charge, l'énergie est toujours à portée de main—rapide, fiable et durable.",
+        "stat_label": "Approuvé par des milliers"
+    },
+    "tech_pillars": {
+        "badge": "Piliers Technologiques",
+        "title": "Conçu pour la vie moderne",
+        "subtitle": "Infrastructure de recharge de pointe alimentée par l'innovation",
+        "items": {
+            "speed": {
+                "title": "Recharge ultra-rapide",
+                "description": "Recharge avancée jusqu'à 100W avec gestion intelligente de l'énergie et protocoles de sécurité.",
+                "detail": "25% de charge en seulement 15 minutes"
+            },
+            "security": {
+                "title": "Sécurité maximale",
+                "description": "Chiffrement de niveau bancaire et authentification biométrique protègent vos appareils et données.",
+                "detail": "Protection de niveau militaire"
+            },
+            "sustainability": {
+                "title": "100% renouvelable",
+                "description": "Alimenté entièrement par l'énergie verte avec des opérations neutres en carbone et des matériaux écologiques.",
+                "detail": "Empreinte carbone zéro"
+            }
+        }
+    },
+    "innovation": {
+        "badge": "Innovation en vedette",
+        "title": "Station de recharge CL19",
+        "subtitle": "Infrastructure de recharge de nouvelle génération avec technologie intelligente et intégration transparente.",
+        "features": [
+            "25% de charge en seulement 15 minutes",
+            "Compatibilité universelle pour tous les appareils",
+            "Interface à écran tactile HD",
+            "Suivi de disponibilité en temps réel",
+            "Système de paiement sans contact"
+        ],
+        "cta": "Explorer la technologie"
     },
     "services": {
         "title": "Nos Services",
@@ -36,10 +80,78 @@
             }
         }
     },
+    "mobile_truck": {
+        "badge": "Solutions mobiles",
+        "title": "Camion de recharge mobile",
+        "subtitle": "L'énergie qui vient à vous. Parfait pour les événements, les urgences et la recharge de véhicules électriques sur demande.",
+        "cta": "Réserver le service"
+    },
+    "impact": {
+        "badge": "Impact en chiffres",
+        "title": "Une puissance qui impressionne",
+        "subtitle": "Des chiffres qui parlent d'eux-mêmes",
+        "stats": {
+            "charge_speed": {
+                "value": "15",
+                "unit": "min",
+                "label": "Temps de charge à 25%"
+            },
+            "power": {
+                "value": "100",
+                "unit": "W",
+                "label": "Puissance maximale"
+            },
+            "connectivity": {
+                "value": "150",
+                "unit": "m",
+                "label": "Portée Bluetooth"
+            }
+        }
+    },
     "stats": {
         "charge_speed": "25% en 15 min",
         "power": "Jusqu'à 100W",
         "connectivity": "Bluetooth 150m"
+    },
+    "sustainability": {
+        "badge": "Impact environnemental",
+        "title": "Alimenter un avenir plus vert",
+        "subtitle": "Chaque recharge fait une différence pour notre planète",
+        "metrics": {
+            "co2_saved": {
+                "value": "2 500",
+                "unit": "kg",
+                "label": "Émissions de CO₂ évitées",
+                "description": "Équivalent à planter 115 arbres"
+            },
+            "renewable": {
+                "value": "100",
+                "unit": "%",
+                "label": "Énergie renouvelable",
+                "description": "Toutes les stations alimentées par l'énergie verte"
+            },
+            "devices": {
+                "value": "50 000",
+                "unit": "+",
+                "label": "Appareils rechargés",
+                "description": "Aider les gens à rester connectés de manière durable"
+            }
+        },
+        "calculator": {
+            "title": "Calculez votre impact",
+            "description": "Voyez combien de CO₂ vous avez économisé en utilisant Dr. Charge"
+        }
+    },
+    "app_section": {
+        "title": "Gérez votre recharge depuis votre téléphone",
+        "description": "Localisez les stations, suivez vos sessions et payez en toute sécurité.",
+        "features": [
+            "Carte interactive des stations",
+            "Suivi en temps réel",
+            "Paiements sécurisés",
+            "Support 24/7"
+        ],
+        "download": "Télécharger l'application"
     },
     "about": {
         "title": "À propos de nous",
@@ -60,18 +172,18 @@
             "success": "Message envoyé avec succès!"
         }
     },
-    "app_section": {
-        "title": "Gérez votre recharge depuis votre téléphone",
-        "description": "Localisez les stations, suivez vos sessions et payez en toute sécurité.",
-        "features": [
-            "Carte interactive des stations",
-            "Suivi en temps réel",
-            "Paiements sécurisés",
-            "Support 24/7"
-        ]
-    },
     "footer": {
         "rights": "Tous droits réservés.",
-        "credit": "Site par Christopher Perrault"
+        "credit": "Site par Christopher Perrault",
+        "newsletter": {
+            "title": "Restez connecté",
+            "placeholder": "Entrez votre email",
+            "button": "S'abonner",
+            "success": "Merci de vous être abonné!"
+        },
+        "certifications": {
+            "carbon_neutral": "Certifié neutre en carbone",
+            "green_energy": "100% énergie verte"
+        }
     }
 }
