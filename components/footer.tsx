@@ -2,17 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import {
-  Zap,
-  Mail,
-  MapPin,
-  Phone,
-  Leaf,
-  Award,
-  Send,
-  Check,
-} from "lucide-react";
+import { Mail, MapPin, Phone, Leaf, Award, Send, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface FooterProps {
@@ -89,15 +81,15 @@ export function Footer({ lang, dictionary }: FooterProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           {/* Brand Column */}
-          <div className="space-y-6">
-            <Link
-              href={`/${lang}`}
-              className="flex items-center gap-2 font-bold text-xl tracking-tighter group"
-            >
-              <div className="bg-[#38A169] text-white p-1.5 rounded-lg group-hover:scale-110 transition-transform">
-                <Zap className="h-5 w-5 fill-current" />
-              </div>
-              <span>Dr. Charge</span>
+          <div className="space-y-4">
+            <Link href={`/${lang}`}>
+              <Image
+                src="/logo-transparent.png"
+                alt="Dr. Charge Logo"
+                width={500}
+                height={500}
+                className="w-64"
+              />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
               {dictionary.hero.subtitle}

@@ -8,4 +8,7 @@ export const images = {
   powerbanks: "/powerbanks-dispenser.jpg",
   emptyPhone: "/low-battery-iphone.jpg",
   ogImage: "/og-strategy.jpg",
+  logo: "/logo.jpeg",
+  logoTransparent: "/logo-transparent.png",
+  favicon: "/favicon.png",
 } as const;

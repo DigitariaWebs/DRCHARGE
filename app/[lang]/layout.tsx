@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "Dr. Charge - Puissance en déplacement",
   description: "Solutions de recharge premium / Premium Charging Solutions",
   metadataBase: new URL("https://drcharge.ca"), // Placeholder for local/production
+  icons: {
+    icon: "/favicon.png",
+  },
   openGraph: {
     images: ["/og-strategy.jpg"],
   },

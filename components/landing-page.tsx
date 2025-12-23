@@ -75,6 +75,22 @@ export function LandingPage({ lang, dictionary }: LandingPageProps) {
               transition={{ duration: 0.8 }}
               className="space-y-8"
             >
+              {/* Logo */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.1, duration: 0.6 }}
+                className="flex justify-center"
+              >
+                <Image
+                  src="/logo-transparent.png"
+                  alt="Dr. Charge Logo"
+                  width={300}
+                  height={300}
+                  className="h-40 w-40 md:h-64 md:w-64"
+                />
+              </motion.div>
+
               <motion.h1
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}

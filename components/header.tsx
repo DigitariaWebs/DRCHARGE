@@ -2,11 +2,12 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Globe, Zap } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 
 interface HeaderProps {
   lang: string;
@@ -67,8 +68,8 @@ export function Header({ lang, dictionary }: HeaderProps) {
   return (
     <motion.header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        "bg-[#1A4B3A] text-white py-4",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-24",
+        "bg-[#1A4B3A] text-white",
       )}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -80,22 +81,25 @@ export function Header({ lang, dictionary }: HeaderProps) {
         style={{ scaleX }}
       />
 
-      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
+      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between h-full">
         {/* Logo */}
         <Link
           href={`/${lang}`}
-          className="flex items-center gap-2 font-bold text-xl tracking-tighter group"
+          className="font-bold text-xl tracking-tighter group flex items-center h-full"
         >
           <motion.div
-            className="p-2 rounded-lg transition-all duration-300"
-            whileHover={{ scale: 1.1, rotate: 5 }}
+            className="transition-all duration-300 h-full flex items-center"
+            whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
-            <Zap className="h-5 w-5 text-[#38A169] fill-current" />
+            <Image
+              src="/logo-transparent.png"
+              alt="Dr. Charge Logo"
+              width={500}
+              height={500}
+              className="h-full w-auto"
+            />
           </motion.div>
-          <span className="text-white transition-all duration-300">
-            Dr. Charge
-          </span>
         </Link>
 
         {/* Desktop Nav */}
