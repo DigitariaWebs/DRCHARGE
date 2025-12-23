@@ -21,8 +21,6 @@ export const metadata: Metadata = {
   },
 };
 
-
-
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
@@ -42,9 +40,7 @@ export default async function RootLayout({
         className={`${inter.variable} antialiased flex flex-col min-h-screen`}
       >
         <Header lang={lang} dictionary={dictionary} />
-        <main className="flex-grow">
-          {children}
-        </main>
+        <main className="flex-grow">{children}</main>
         <Footer lang={lang} dictionary={dictionary} />
       </body>
     </html>

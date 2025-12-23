@@ -18,17 +18,19 @@ export function SplitLayout({
   className,
 }: SplitLayoutProps) {
   return (
-    <div className={cn(
-      "grid grid-cols-1 lg:grid-cols-2",
-      SPACING.gap.xlarge,
-      "items-center",
-      className
-    )}>
+    <div
+      className={cn(
+        "grid grid-cols-1 lg:grid-cols-2",
+        SPACING.gap.xlarge,
+        "items-center",
+        className,
+      )}
+    >
       <motion.div
         {...ANIMATIONS.scale}
         className={cn(
           "order-2 lg:order-1",
-          imageSide === "right" && "lg:order-2"
+          imageSide === "right" && "lg:order-2",
         )}
       >
         {image}
@@ -37,7 +39,7 @@ export function SplitLayout({
         {...ANIMATIONS.fadeInUp}
         className={cn(
           "order-1 lg:order-2 space-y-10",
-          imageSide === "right" && "lg:order-1"
+          imageSide === "right" && "lg:order-1",
         )}
       >
         {content}
@@ -45,4 +47,3 @@ export function SplitLayout({
     </div>
   );
 }
-

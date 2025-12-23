@@ -27,40 +27,39 @@ export function ServicesPage({ dictionary }: ServicesPageProps) {
       image: images.powerbanks,
       features: ["Sécurisé", "Rapide", "Écran HD"],
       icon: Zap,
-      gradient: "from-blue-500 to-cyan-600",
+      gradient: "from-[#38A169] to-[#1A4B3A]",
     },
     {
       key: "powerbank",
       image: images.lifestyle,
       features: ["Mobile", "Disponible 24/7", "Compatible"],
       icon: Battery,
-      gradient: "from-emerald-500 to-teal-600",
+      gradient: "from-[#38A169] to-[#1A4B3A]",
     },
     {
       key: "truck",
       image: images.mobileTruck,
       features: ["Événementiel", "Urgence", "Grande capacité"],
       icon: Truck,
-      gradient: "from-teal-500 to-green-600",
+      gradient: "from-[#38A169] to-[#1A4B3A]",
     },
   ];
 
   return (
-    <div className="pt-24 pb-16 min-h-screen">
-      <div className="container px-4 md:px-6">
+    <div className="pt-24 pb-16 min-h-screen bg-[#F9F9F9]">
+      <div className="container px-4 md:px-6 mx-auto max-w-7xl">
         {/* Header */}
         <ScrollReveal className="text-center mb-20">
-          <TechBadge variant="eco" glow className="mb-6">
-            Our Solutions
-          </TechBadge>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className={`${TYPOGRAPHY.h1} mb-6 text-gradient-eco-tech`}
+            className={`${TYPOGRAPHY.h1} mb-6 text-gray-900`}
           >
             {dictionary.services.title}
           </motion.h1>
-          <p className={`${TYPOGRAPHY.subtitle} text-muted-foreground max-w-3xl mx-auto`}>
+          <p
+            className={`${TYPOGRAPHY.subtitle} text-gray-600 max-w-3xl mx-auto`}
+          >
             Innovative charging solutions for every need
           </p>
         </ScrollReveal>
@@ -90,7 +89,7 @@ export function ServicesPage({ dictionary }: ServicesPageProps) {
                           className="object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                        
+
                         {/* Floating Icon Badge */}
                         <motion.div
                           className="absolute top-6 right-6"
@@ -99,7 +98,9 @@ export function ServicesPage({ dictionary }: ServicesPageProps) {
                           transition={{ delay: 0.3, type: "spring" }}
                           viewport={{ once: true }}
                         >
-                          <div className={`p-4 rounded-2xl bg-gradient-to-br ${service.gradient} shadow-2xl`}>
+                          <div
+                            className={`p-4 rounded-2xl bg-gradient-to-br ${service.gradient} shadow-2xl`}
+                          >
                             <Icon className="h-8 w-8 text-white" />
                           </div>
                         </motion.div>
@@ -110,10 +111,12 @@ export function ServicesPage({ dictionary }: ServicesPageProps) {
                   {/* Content */}
                   <div className="flex-1 space-y-8">
                     <div>
-                      <h2 className={`${TYPOGRAPHY.h2} mb-4 text-gradient-eco`}>
+                      <h2 className={`${TYPOGRAPHY.h2} mb-4 text-gray-900`}>
                         {data.title}
                       </h2>
-                      <p className={`${TYPOGRAPHY.bodyLarge} text-muted-foreground leading-relaxed`}>
+                      <p
+                        className={`${TYPOGRAPHY.bodyLarge} text-gray-600 leading-relaxed`}
+                      >
                         {data.description}
                       </p>
                     </div>
@@ -129,10 +132,12 @@ export function ServicesPage({ dictionary }: ServicesPageProps) {
                           viewport={{ once: true }}
                           className="flex items-center gap-4 group/item"
                         >
-                          <div className={`h-12 w-12 rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center shadow-lg group-hover/item:scale-110 transition-transform`}>
+                          <div
+                            className={`h-12 w-12 rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center shadow-lg group-hover/item:scale-110 transition-transform`}
+                          >
                             <CheckCircle className="h-6 w-6 text-white" />
                           </div>
-                          <span className="text-lg font-semibold text-foreground">
+                          <span className="text-lg font-semibold text-gray-900">
                             {feat}
                           </span>
                         </motion.li>

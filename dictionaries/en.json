@@ -1,189 +1,189 @@
 {
-    "common": {
-        "loading": "Loading...",
-        "contact": "Contact",
-        "learn_more": "Learn More",
-        "view_all": "View All",
-        "install_app": "Install App",
-        "explore": "Explore",
-        "discover": "Discover More"
-    },
-    "nav": {
-        "home": "Home",
-        "services": "Services",
-        "about": "About",
-        "faq": "FAQ",
-        "contact": "Contact"
-    },
-    "hero": {
-        "title": "Power on the Move",
-        "subtitle": "Smart and sustainable charging solutions for a connected world.",
-        "cta_primary": "Contact Us",
-        "cta_secondary": "Install App",
-        "scroll_hint": "Scroll to explore"
-    },
-    "challenge": {
-        "badge": "The Challenge",
-        "title": "0% Battery? Never Again.",
-        "subtitle": "Don't let a dead battery ruin your day. With the Dr. Charge network, power is always within reach—fast, reliable, and sustainable.",
-        "stat_label": "Trusted by thousands"
-    },
-    "tech_pillars": {
-        "badge": "Technology Pillars",
-        "title": "Built for Modern Life",
-        "subtitle": "Cutting-edge charging infrastructure powered by innovation",
-        "items": {
-            "speed": {
-                "title": "Ultra-Fast Charging",
-                "description": "Advanced charging up to 100W with intelligent power management and safety protocols.",
-                "detail": "25% charge in just 15 minutes"
-            },
-            "security": {
-                "title": "Maximum Security",
-                "description": "Bank-grade encryption and biometric authentication protect your devices and data.",
-                "detail": "Military-grade protection"
-            },
-            "sustainability": {
-                "title": "100% Renewable",
-                "description": "Powered entirely by green energy with carbon-neutral operations and eco-friendly materials.",
-                "detail": "Zero carbon footprint"
-            }
-        }
-    },
-    "innovation": {
-        "badge": "Innovation Spotlight",
-        "title": "CL19 Charging Station",
-        "subtitle": "Next-generation charging infrastructure with smart technology and seamless integration.",
-        "features": [
-            "25% charge in just 15 minutes",
-            "Universal compatibility for all devices",
-            "HD touchscreen interface",
-            "Real-time availability tracking",
-            "Contactless payment system"
-        ],
-        "cta": "Explore Technology"
-    },
-    "services": {
-        "title": "Our Services",
-        "items": {
-            "station": {
-                "title": "CL19 Charging Station",
-                "description": "Secure lockers with fast charging and interactive display."
-            },
-            "powerbank": {
-                "title": "Powerbank Dispensers",
-                "description": "Rent a portable battery and charge while you walk."
-            },
-            "truck": {
-                "title": "Mobile Charging Truck",
-                "description": "Energy that comes to you. For EVs and events."
-            }
-        }
-    },
-    "mobile_truck": {
-        "badge": "Mobile Solutions",
-        "title": "Mobile Charging Truck",
-        "subtitle": "Power that comes to you. Perfect for events, emergencies, and electric vehicle charging on demand.",
-        "cta": "Book Service"
-    },
-    "impact": {
-        "badge": "Impact by Numbers",
-        "title": "Power That Impresses",
-        "subtitle": "Numbers that speak for themselves",
-        "stats": {
-            "charge_speed": {
-                "value": "15",
-                "unit": "min",
-                "label": "25% charge time"
-            },
-            "power": {
-                "value": "100",
-                "unit": "W",
-                "label": "Maximum power output"
-            },
-            "connectivity": {
-                "value": "150",
-                "unit": "m",
-                "label": "Bluetooth range"
-            }
-        }
-    },
-    "stats": {
-        "charge_speed": "25% in 15 min",
-        "power": "Up to 100W",
-        "connectivity": "Bluetooth 150m"
-    },
-    "sustainability": {
-        "badge": "Environmental Impact",
-        "title": "Powering a Greener Future",
-        "subtitle": "Every charge makes a difference for our planet",
-        "metrics": {
-            "co2_saved": {
-                "value": "2,500",
-                "unit": "kg",
-                "label": "CO₂ emissions prevented",
-                "description": "Equivalent to planting 115 trees"
-            },
-            "renewable": {
-                "value": "100",
-                "unit": "%",
-                "label": "Renewable energy",
-                "description": "All stations powered by green energy"
-            },
-            "devices": {
-                "value": "50,000",
-                "unit": "+",
-                "label": "Devices charged",
-                "description": "Helping people stay connected sustainably"
-            }
-        },
-        "calculator": {
-            "title": "Calculate Your Impact",
-            "description": "See how much CO₂ you've saved by using Dr. Charge"
-        }
-    },
-    "app_section": {
-        "title": "Manage your charge from phone",
-        "description": "Locate stations, track your sessions, and pay securely.",
-        "features": [
-            "Interactive station map",
-            "Real-time tracking",
-            "Secure payments",
-            "24/7 Support"
-        ],
-        "download": "Download the App"
-    },
-    "about": {
-        "title": "About Us",
-        "mission": "Making energy accessible everywhere, anytime."
-    },
-    "faq": {
-        "title": "Frequently Asked Questions"
-    },
-    "contact": {
-        "title": "Contact Us",
-        "form": {
-            "name": "Full Name",
-            "email": "Email Address",
-            "phone": "Phone (Optional)",
-            "subject": "Subject",
-            "message": "Your Message",
-            "send": "Send Message",
-            "success": "Message sent successfully!"
-        }
-    },
-    "footer": {
-        "rights": "All rights reserved.",
-        "credit": "Site by Christopher Perrault",
-        "newsletter": {
-            "title": "Stay Connected",
-            "placeholder": "Enter your email",
-            "button": "Subscribe",
-            "success": "Thanks for subscribing!"
-        },
-        "certifications": {
-            "carbon_neutral": "Carbon Neutral Certified",
-            "green_energy": "100% Green Energy"
-        }
+  "common": {
+    "loading": "Loading...",
+    "contact": "Contact",
+    "learn_more": "Learn More",
+    "view_all": "View All",
+    "install_app": "Install App",
+    "explore": "Explore",
+    "discover": "Discover More"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Power on the Move",
+    "subtitle": "Smart and sustainable charging solutions for a connected world.",
+    "cta_primary": "Contact Us",
+    "cta_secondary": "Install App",
+    "scroll_hint": "Scroll to explore"
+  },
+  "challenge": {
+    "badge": "The Challenge",
+    "title": "0% Battery? Never Again.",
+    "subtitle": "Don't let a dead battery ruin your day. With the Dr. Charge network, power is always within reach—fast, reliable, and sustainable.",
+    "stat_label": "Trusted by thousands"
+  },
+  "tech_pillars": {
+    "badge": "Technology Pillars",
+    "title": "Built for Modern Life",
+    "subtitle": "Cutting-edge charging infrastructure powered by innovation",
+    "items": {
+      "speed": {
+        "title": "Ultra-Fast Charging",
+        "description": "Advanced charging up to 100W with intelligent power management and safety protocols.",
+        "detail": "25% charge in just 15 minutes"
+      },
+      "security": {
+        "title": "Maximum Security",
+        "description": "Bank-grade encryption and biometric authentication protect your devices and data.",
+        "detail": "Military-grade protection"
+      },
+      "sustainability": {
+        "title": "100% Renewable",
+        "description": "Powered entirely by green energy with carbon-neutral operations and eco-friendly materials.",
+        "detail": "Zero carbon footprint"
+      }
     }
+  },
+  "innovation": {
+    "badge": "Innovation Spotlight",
+    "title": "CL19 Charging Station",
+    "subtitle": "Next-generation charging infrastructure with smart technology and seamless integration.",
+    "features": [
+      "25% charge in just 15 minutes",
+      "Universal compatibility for all devices",
+      "HD touchscreen interface",
+      "Real-time availability tracking",
+      "Contactless payment system"
+    ],
+    "cta": "Explore Technology"
+  },
+  "services": {
+    "title": "Our Services",
+    "items": {
+      "station": {
+        "title": "CL19 Charging Station",
+        "description": "Secure lockers with fast charging and interactive display."
+      },
+      "powerbank": {
+        "title": "Powerbank Dispensers",
+        "description": "Rent a portable battery and charge while you walk."
+      },
+      "truck": {
+        "title": "Mobile Charging Truck",
+        "description": "Energy that comes to you. For EVs and events."
+      }
+    }
+  },
+  "mobile_truck": {
+    "badge": "Mobile Solutions",
+    "title": "Mobile Charging Truck",
+    "subtitle": "Power that comes to you. Perfect for events, emergencies, and electric vehicle charging on demand.",
+    "cta": "Book Service"
+  },
+  "impact": {
+    "badge": "Impact by Numbers",
+    "title": "Power That Impresses",
+    "subtitle": "Numbers that speak for themselves",
+    "stats": {
+      "charge_speed": {
+        "value": "15",
+        "unit": "min",
+        "label": "25% charge time"
+      },
+      "power": {
+        "value": "100",
+        "unit": "W",
+        "label": "Maximum power output"
+      },
+      "connectivity": {
+        "value": "150",
+        "unit": "m",
+        "label": "Bluetooth range"
+      }
+    }
+  },
+  "stats": {
+    "charge_speed": "25% in 15 min",
+    "power": "Up to 100W",
+    "connectivity": "Bluetooth 150m"
+  },
+  "sustainability": {
+    "badge": "Environmental Impact",
+    "title": "Powering a Greener Future",
+    "subtitle": "Every charge makes a difference for our planet",
+    "metrics": {
+      "co2_saved": {
+        "value": "2,500",
+        "unit": "kg",
+        "label": "CO₂ emissions prevented",
+        "description": "Equivalent to planting 115 trees"
+      },
+      "renewable": {
+        "value": "100",
+        "unit": "%",
+        "label": "Renewable energy",
+        "description": "All stations powered by green energy"
+      },
+      "devices": {
+        "value": "50,000",
+        "unit": "+",
+        "label": "Devices charged",
+        "description": "Helping people stay connected sustainably"
+      }
+    },
+    "calculator": {
+      "title": "Calculate Your Impact",
+      "description": "See how much CO₂ you've saved by using Dr. Charge"
+    }
+  },
+  "app_section": {
+    "title": "Manage your charge from phone",
+    "description": "Locate stations, track your sessions, and pay securely.",
+    "features": [
+      "Interactive station map",
+      "Real-time tracking",
+      "Secure payments",
+      "24/7 Support"
+    ],
+    "download": "Download the App"
+  },
+  "about": {
+    "title": "About Us",
+    "mission": "Making energy accessible everywhere, anytime."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone (Optional)",
+      "subject": "Subject",
+      "message": "Your Message",
+      "send": "Send Message",
+      "success": "Message sent successfully!"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "credit": "Site by Christopher Perrault",
+    "newsletter": {
+      "title": "Stay Connected",
+      "placeholder": "Enter your email",
+      "button": "Subscribe",
+      "success": "Thanks for subscribing!"
+    },
+    "certifications": {
+      "carbon_neutral": "Carbon Neutral Certified",
+      "green_energy": "100% Green Energy"
+    }
+  }
 }

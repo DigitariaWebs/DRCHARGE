@@ -37,7 +37,7 @@ export function CursorGlow({
       setMousePosition({ x: e.clientX, y: e.clientY });
       setIsVisible(true);
     }),
-    []
+    [],
   );
 
   const handleMouseLeave = useCallback(() => {
@@ -83,4 +83,3 @@ export function CursorGlow({
     />
   );
 }
-

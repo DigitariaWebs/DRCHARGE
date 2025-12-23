@@ -35,4 +35,3 @@ export function FloatingElement({
     </motion.div>
   );
 }
-

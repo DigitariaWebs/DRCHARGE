@@ -32,7 +32,10 @@ export function CounterAnimation({
 
     const animate = (currentTime: number) => {
       if (startTime === null) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / (duration * 1000), 1);
+      const progress = Math.min(
+        (currentTime - startTime) / (duration * 1000),
+        1,
+      );
 
       // Easing function for smooth animation
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
@@ -58,4 +61,3 @@ export function CounterAnimation({
     </span>
   );
 }
-

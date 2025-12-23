@@ -34,7 +34,7 @@ export function TechBadge({
         "inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold backdrop-blur-md border",
         variantStyles[variant],
         glow && glowStyles[variant],
-        className
+        className,
       )}
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -46,7 +46,7 @@ export function TechBadge({
             "w-2 h-2 rounded-full mr-2",
             variant === "eco" && "bg-emerald-500",
             variant === "tech" && "bg-blue-500",
-            variant === "neutral" && "bg-gray-500"
+            variant === "neutral" && "bg-gray-500",
           )}
           animate={{
             opacity: [1, 0.5, 1],
@@ -63,4 +63,3 @@ export function TechBadge({
     </motion.div>
   );
 }
-

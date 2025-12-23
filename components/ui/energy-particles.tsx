@@ -39,7 +39,9 @@ export function EnergyParticles({
   }, [count, colors]);
 
   return (
-    <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
+    <div
+      className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}
+    >
       {particles.current.map((particle) => (
         <motion.div
           key={particle.id}
@@ -68,4 +70,3 @@ export function EnergyParticles({
     </div>
   );
 }
-

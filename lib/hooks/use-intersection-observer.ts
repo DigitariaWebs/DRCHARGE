@@ -38,7 +38,7 @@ export function useIntersectionObserver({
           observer.disconnect();
         }
       },
-      { threshold, rootMargin }
+      { threshold, rootMargin },
     );
 
     observer.observe(element);
@@ -50,4 +50,3 @@ export function useIntersectionObserver({
 
   return { ref, isIntersecting, hasBeenVisible };
 }
-

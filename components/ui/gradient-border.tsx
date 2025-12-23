@@ -27,7 +27,8 @@ export function GradientBorder({
         style={{
           background: `linear-gradient(90deg, ${gradientColors})`,
           padding: `${borderWidth}px`,
-          WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+          WebkitMask:
+            "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
           WebkitMaskComposite: "xor",
           maskComposite: "exclude",
         }}
@@ -52,4 +53,3 @@ export function GradientBorder({
     </div>
   );
 }
-

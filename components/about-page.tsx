@@ -26,38 +26,35 @@ export function AboutPage({ dictionary }: AboutPageProps) {
       icon: Leaf,
       title: "Sustainability",
       description: "100% renewable energy powering all our solutions",
-      gradient: "from-emerald-500 to-green-600",
+      gradient: "from-[#38A169] to-[#1A4B3A]",
     },
     {
       icon: Zap,
       title: "Innovation",
       description: "Cutting-edge technology for fast, reliable charging",
-      gradient: "from-blue-500 to-cyan-600",
+      gradient: "from-[#38A169] to-[#1A4B3A]",
     },
     {
       icon: Target,
       title: "Accessibility",
       description: "Making power available everywhere, anytime",
-      gradient: "from-teal-500 to-emerald-600",
+      gradient: "from-[#38A169] to-[#1A4B3A]",
     },
   ];
 
   return (
-    <div className="pt-24 pb-16 min-h-screen">
-      <div className="container px-4 md:px-6">
+    <div className="pt-24 pb-16 min-h-screen bg-[#F9F9F9]">
+      <div className="container px-4 md:px-6 mx-auto max-w-7xl">
         {/* Header */}
         <ScrollReveal className="text-center max-w-4xl mx-auto mb-20">
-          <TechBadge variant="eco" glow className="mb-6">
-            Who We Are
-          </TechBadge>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className={`${TYPOGRAPHY.h1} mb-6 text-gradient-eco-tech`}
+            className={`${TYPOGRAPHY.h1} mb-6 text-gray-900`}
           >
             {dictionary.about.title}
           </motion.h1>
-          <p className={`${TYPOGRAPHY.bodyLarge} text-muted-foreground`}>
+          <p className={`${TYPOGRAPHY.bodyLarge} text-gray-600`}>
             {dictionary.about.mission}
           </p>
         </ScrollReveal>
@@ -72,7 +69,7 @@ export function AboutPage({ dictionary }: AboutPageProps) {
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/80 via-emerald-900/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1A4B3A]/80 via-[#1A4B3A]/40 to-transparent" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -84,7 +81,9 @@ export function AboutPage({ dictionary }: AboutPageProps) {
                   <h3 className="text-white text-4xl md:text-6xl font-bold mb-4">
                     Énergie Verte & Durable
                   </h3>
-                  <p className="text-emerald-100 text-xl">Powering a greener future</p>
+                  <p className="text-white/90 text-xl">
+                    Powering a greener future
+                  </p>
                 </motion.div>
               </div>
             </div>
@@ -94,24 +93,34 @@ export function AboutPage({ dictionary }: AboutPageProps) {
         {/* Values Section */}
         <ScrollReveal className="mb-24">
           <div className="text-center mb-12">
-            <h2 className={`${TYPOGRAPHY.h2} mb-4 text-gradient-eco`}>Our Values</h2>
-            <p className={`${TYPOGRAPHY.subtitle} text-muted-foreground max-w-2xl mx-auto`}>
+            <h2 className={`${TYPOGRAPHY.h2} mb-4 text-gray-900`}>
+              Our Values
+            </h2>
+            <p
+              className={`${TYPOGRAPHY.subtitle} text-gray-600 max-w-2xl mx-auto`}
+            >
               The principles that guide everything we do
             </p>
           </div>
-          <div className={`grid grid-cols-1 md:grid-cols-3 ${SPACING.gap.medium}`}>
+          <div
+            className={`grid grid-cols-1 md:grid-cols-3 ${SPACING.gap.medium} justify-items-center`}
+          >
             {values.map((value, i) => (
-              <ScrollReveal key={i} delay={i * 0.1}>
-                <InteractiveCard>
+              <ScrollReveal key={i} delay={i * 0.1} className="w-full max-w-sm">
+                <InteractiveCard className="w-full">
                   <motion.div
-                    className="p-8 rounded-3xl bg-white/80 backdrop-blur-sm border border-emerald-200/50 hover:border-emerald-300 transition-all h-full"
-                    whileHover={{ y: -8 }}
+                    className="p-8 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-lg transition-all h-full w-full"
+                    whileHover={{ y: -4 }}
                   >
-                    <div className={`h-16 w-16 rounded-2xl bg-gradient-to-br ${value.gradient} flex items-center justify-center mb-6 shadow-lg`}>
+                    <div
+                      className={`h-16 w-16 rounded-xl bg-gradient-to-br ${value.gradient} flex items-center justify-center mb-6 shadow-lg`}
+                    >
                       <value.icon className="h-8 w-8 text-white" />
                     </div>
-                    <h3 className={`${TYPOGRAPHY.h3} mb-4`}>{value.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <h3 className={`${TYPOGRAPHY.h3} mb-4 text-gray-900`}>
+                      {value.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
                       {value.description}
                     </p>
                   </motion.div>
@@ -125,14 +134,16 @@ export function AboutPage({ dictionary }: AboutPageProps) {
         <ScrollReveal className="mb-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div className="space-y-6">
-              <TechBadge variant="tech">Innovation</TechBadge>
-              <h2 className={`${TYPOGRAPHY.h2} text-gradient-tech`}>
+              <h2 className={`${TYPOGRAPHY.h2} text-gray-900`}>
                 Innovation & Design
               </h2>
-              <p className={`${TYPOGRAPHY.bodyLarge} text-muted-foreground leading-relaxed`}>
+              <p
+                className={`${TYPOGRAPHY.bodyLarge} text-gray-600 leading-relaxed`}
+              >
                 Nos unités mobiles et stations sont conçues par les meilleurs
                 ingénieurs pour allier esthétique et performance. Le design du
-                camion mobile permet une intervention rapide et efficace partout.
+                camion mobile permet une intervention rapide et efficace
+                partout.
               </p>
             </div>
             <InteractiveCard>
@@ -152,23 +163,25 @@ export function AboutPage({ dictionary }: AboutPageProps) {
         {/* Team Section */}
         <ScrollReveal>
           <div className="text-center mb-12">
-            <h2 className={`${TYPOGRAPHY.h2} mb-4`}>Our Team</h2>
-            <p className={`${TYPOGRAPHY.subtitle} text-muted-foreground max-w-2xl mx-auto`}>
+            <h2 className={`${TYPOGRAPHY.h2} mb-4 text-gray-900`}>Our Team</h2>
+            <p
+              className={`${TYPOGRAPHY.subtitle} text-gray-600 max-w-2xl mx-auto`}
+            >
               Meet the people powering the future
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
             {team.map((member, i) => (
-              <ScrollReveal key={i} delay={i * 0.1}>
-                <InteractiveCard>
+              <ScrollReveal key={i} delay={i * 0.1} className="w-full max-w-sm">
+                <InteractiveCard className="w-full">
                   <motion.div
-                    className="p-10 rounded-3xl bg-white/90 backdrop-blur-sm border border-emerald-200/50 text-center hover:border-emerald-300 transition-all"
-                    whileHover={{ y: -8 }}
+                    className="p-10 rounded-xl bg-white border border-gray-200 shadow-sm text-center hover:shadow-lg transition-all w-full"
+                    whileHover={{ y: -4 }}
                   >
                     {/* Team member photo would go here */}
                     <div className="relative h-32 w-32 mx-auto mb-6">
                       <motion.div
-                        className="h-full w-full bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center shadow-xl overflow-hidden"
+                        className="h-full w-full bg-gradient-to-br from-[#38A169] to-[#1A4B3A] rounded-full flex items-center justify-center shadow-xl overflow-hidden"
                         whileHover={{ scale: 1.1 }}
                         transition={{ duration: 0.3 }}
                       >
@@ -176,8 +189,10 @@ export function AboutPage({ dictionary }: AboutPageProps) {
                         <User className="h-16 w-16 text-white" />
                       </motion.div>
                     </div>
-                    <h3 className="text-xl font-bold mb-2">{member.name}</h3>
-                    <p className="text-emerald-600 font-medium">{member.role}</p>
+                    <h3 className="text-xl font-bold mb-2 text-gray-900">
+                      {member.name}
+                    </h3>
+                    <p className="text-[#38A169] font-medium">{member.role}</p>
                   </motion.div>
                 </InteractiveCard>
               </ScrollReveal>

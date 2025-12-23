@@ -5,11 +5,13 @@ Site vitrine premium pour Dr. Charge, développé avec Next.js 15, TypeScript, T
 ## 🚀 Démarrage Rapide
 
 1.  **Installation des dépendances**
+
     ```bash
     npm install
     ```
 
 2.  **Lancer le serveur de développement**
+
     ```bash
     npm run dev
     ```
@@ -18,20 +20,20 @@ Site vitrine premium pour Dr. Charge, développé avec Next.js 15, TypeScript, T
 
 ## 🛠 Stack Technique
 
--   **Next.js 15** (App Router)
--   **TypeScript**
--   **Tailwind CSS v4** (Styling & Design System)
--   **Framer Motion** (Animations & Micro-interactions)
--   **Lucide React** (Icônes)
--   **i18n** (Support FR/EN avec détection automatique)
+- **Next.js 15** (App Router)
+- **TypeScript**
+- **Tailwind CSS v4** (Styling & Design System)
+- **Framer Motion** (Animations & Micro-interactions)
+- **Lucide React** (Icônes)
+- **i18n** (Support FR/EN avec détection automatique)
 
 ## 📂 Structure
 
--   `app/[lang]`: Pages et Layouts localisés.
--   `components`: Composants UI réutilisables (Header, Footer, Sections).
--   `lib`: Utilitaires (i18n, mapping images).
--   `dictionaries`: Fichiers de traduction JSON.
--   `public`: Images et vidéos (Mappées dans `lib/images.ts`).
+- `app/[lang]`: Pages et Layouts localisés.
+- `components`: Composants UI réutilisables (Header, Footer, Sections).
+- `lib`: Utilitaires (i18n, mapping images).
+- `dictionaries`: Fichiers de traduction JSON.
+- `public`: Images et vidéos (Mappées dans `lib/images.ts`).
 
 ## 🎨 Design & Assets
 

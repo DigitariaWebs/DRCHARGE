@@ -2,7 +2,11 @@ import { getDictionary } from "@/get-dictionary";
 import { LandingPage } from "@/components/landing-page";
 import { Locale } from "@/i18n-config";
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
   const { lang } = await params;
   const dictionary = await getDictionary(lang as Locale);
   return {
@@ -11,7 +15,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 }
 
-export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
   const { lang } = await params;
   const dictionary = await getDictionary(lang as Locale);
   return <LandingPage lang={lang} dictionary={dictionary} />;

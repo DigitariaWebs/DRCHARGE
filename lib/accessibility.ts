@@ -9,7 +9,7 @@
 export function generateAriaLabel(
   action: string,
   target: string,
-  context?: string
+  context?: string,
 ): string {
   return context ? `${action} ${target} - ${context}` : `${action} ${target}`;
 }
@@ -19,13 +19,9 @@ export function generateAriaLabel(
  */
 export function isKeyboardAccessible(element: HTMLElement): boolean {
   const tabIndex = element.getAttribute("tabindex");
-  const isInteractive = [
-    "A",
-    "BUTTON",
-    "INPUT",
-    "SELECT",
-    "TEXTAREA",
-  ].includes(element.tagName);
+  const isInteractive = ["A", "BUTTON", "INPUT", "SELECT", "TEXTAREA"].includes(
+    element.tagName,
+  );
 
   return isInteractive || (tabIndex !== null && parseInt(tabIndex) >= 0);
 }
@@ -35,7 +31,7 @@ export function isKeyboardAccessible(element: HTMLElement): boolean {
  */
 export function handleKeyboardClick(
   event: React.KeyboardEvent,
-  callback: () => void
+  callback: () => void,
 ): void {
   if (event.key === "Enter" || event.key === " ") {
     event.preventDefault();
@@ -49,7 +45,7 @@ export function handleKeyboardClick(
  */
 export function meetsContrastRequirements(
   foreground: string,
-  background: string
+  background: string,
 ): boolean {
   // This is a simplified check - in production, use a proper color contrast library
   // For now, we'll assume our design system colors meet requirements
@@ -61,7 +57,7 @@ export function meetsContrastRequirements(
  */
 export function createFocusTrap(container: HTMLElement) {
   const focusableElements = container.querySelectorAll<HTMLElement>(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
   );
 
   const firstElement = focusableElements[0];
@@ -97,7 +93,7 @@ export function createFocusTrap(container: HTMLElement) {
  */
 export function announceToScreenReader(
   message: string,
-  priority: "polite" | "assertive" = "polite"
+  priority: "polite" | "assertive" = "polite",
 ): void {
   const announcement = document.createElement("div");
   announcement.setAttribute("role", "status");
@@ -123,4 +119,3 @@ export function skipToMainContent(): void {
     main.scrollIntoView({ behavior: "smooth" });
   }
 }
-

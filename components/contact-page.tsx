@@ -37,8 +37,8 @@ export function ContactPage({ dictionary }: ContactPageProps) {
   };
 
   return (
-    <div className="pt-24 pb-16">
-      <div className="container px-4 md:px-6">
+    <div className="pt-24 pb-16 bg-[#F9F9F9]">
+      <div className="container px-4 md:px-6 mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Info */}
           <motion.div
@@ -46,36 +46,36 @@ export function ContactPage({ dictionary }: ContactPageProps) {
             animate={{ opacity: 1, x: 0 }}
             className="space-y-8"
           >
-            <h1 className="text-4xl md:text-5xl font-bold">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
               {dictionary.contact.title}
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-gray-600">
               Une question? Un devis? Notre équipe vous répond sous 24h.
             </p>
 
             <div className="space-y-6 pt-8">
               <div className="flex items-center gap-4 text-lg">
-                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                <div className="h-12 w-12 rounded-full bg-[#38A169]/10 flex items-center justify-center text-[#38A169]">
                   <MapPin className="h-6 w-6" />
                 </div>
-                <span>Montréal, Québec, Canada</span>
+                <span className="text-gray-900">Montréal, Québec, Canada</span>
               </div>
               <div className="flex items-center gap-4 text-lg">
-                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                <div className="h-12 w-12 rounded-full bg-[#38A169]/10 flex items-center justify-center text-[#38A169]">
                   <Mail className="h-6 w-6" />
                 </div>
                 <a
                   href="mailto:info@drcharge.ca"
-                  className="hover:text-primary transition-colors"
+                  className="hover:text-[#38A169] transition-colors text-gray-900"
                 >
                   info@drcharge.ca
                 </a>
               </div>
               <div className="flex items-center gap-4 text-lg">
-                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                <div className="h-12 w-12 rounded-full bg-[#38A169]/10 flex items-center justify-center text-[#38A169]">
                   <Phone className="h-6 w-6" />
                 </div>
-                <span>514-369-3699</span>
+                <span className="text-gray-900">514-369-3699</span>
               </div>
             </div>
           </motion.div>
@@ -85,7 +85,7 @@ export function ContactPage({ dictionary }: ContactPageProps) {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
-            className="bg-card border border-border/50 rounded-2xl p-8 shadow-lg"
+            className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
@@ -152,7 +152,11 @@ export function ContactPage({ dictionary }: ContactPageProps) {
                 />
               </div>
 
-              <Button type="submit" size="lg" className="w-full">
+              <Button
+                type="submit"
+                size="lg"
+                className="w-full bg-[#38A169] hover:bg-[#38A169]/90 text-white"
+              >
                 {success
                   ? dictionary.contact.form.success
                   : dictionary.contact.form.send}
