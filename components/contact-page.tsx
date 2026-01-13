@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Send, MapPin, Mail, Phone } from "lucide-react";
+import { Send, MapPin, Mail } from "lucide-react";
 
 interface ContactPageProps {
   dictionary: Dictionary;
@@ -70,12 +70,6 @@ export function ContactPage({ dictionary }: ContactPageProps) {
                 >
                   info@drcharge.ca
                 </a>
-              </div>
-              <div className="flex items-center gap-4 text-lg">
-                <div className="h-12 w-12 rounded-full bg-[#38A169]/10 flex items-center justify-center text-[#38A169]">
-                  <Phone className="h-6 w-6" />
-                </div>
-                <span className="text-gray-900">514-369-3699</span>
               </div>
             </div>
           </motion.div>

@@ -16,9 +16,11 @@ interface AboutPageProps {
 
 export function AboutPage({ dictionary }: AboutPageProps) {
   const team = [
-    { name: "Patrick Stevenson Dubois", role: "Fondateur, PDG" },
-    { name: "Matt Perez", role: "Fondateur" },
-    { name: "Christopher Perrault", role: "Développeur" },
+    { name: "Patrick Dubois", role: "CEO, Founder & President" },
+    { name: "Sabrina Arasimowicz", role: "Senior Vice President" },
+    { name: "Matt Perez", role: "Director" },
+    { name: "Progix", role: "Responsable IT & Development" },
+    { name: "Toulch & Assoc", role: "Legal" },
   ];
 
   const values = [

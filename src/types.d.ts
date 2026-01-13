@@ -161,6 +161,12 @@ type Dictionary = {
       success: string;
     };
   };
+  sponsors: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    coming_soon: string;
+  };
   footer: {
     rights: string;
     credit: string;

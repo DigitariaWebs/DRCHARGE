@@ -172,6 +172,12 @@
       "success": "Message sent successfully!"
     }
   },
+  "sponsors": {
+    "badge": "Partners",
+    "title": "Sponsors & Collaborations",
+    "subtitle": "Trusted partners powering our mission",
+    "coming_soon": "Partner logos coming soon"
+  },
   "footer": {
     "rights": "All rights reserved.",
     "credit": "Site by Christopher Perrault",

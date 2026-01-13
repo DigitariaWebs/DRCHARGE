@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import { AppCTA } from "@/components/app-cta";
+import { SponsorsSection } from "@/components/sponsors-section";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 
 import { SplitLayout } from "@/components/ui/split-layout";
@@ -698,6 +699,9 @@ export function LandingPage({ lang, dictionary }: LandingPageProps) {
 
       {/* SUSTAINABILITY DASHBOARD SECTION */}
       <SustainabilityDashboard dictionary={dictionary} />
+
+      {/* SPONSORS & COLLABORATIONS SECTION */}
+      <SponsorsSection dictionary={dictionary} />
 
       {/* APP SECTION */}
       <AppCTA dictionary={dictionary} />
